@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecting</title>
+    <link rel="icon" href="static/logo3.ico" type="image/ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles2.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <div class="section info-section">
+        <button>
+            <img id="foto" height="100%" width="100%" src="\static\Perfil.png">
+        </button>
+        <button id="snake">
+            <a href="{{ url_for('snake') }}">Jugar a Snake</a>
+        </button>
+    </div>
+
+    <div class="section chat-section" id="chat-section">
+        <header>
+            <button id="resize-button">Expandir Chat</button>
+        </header>
+        <ul class="chatbox" id="chatboxid"></ul>
+        <button id="go-to-bottom">Ir al final</button>
+        <footer class="message-input">
+            <div class="message-textarea-container">
+                <textarea class="message-textarea" id="user-message" placeholder=" Escribe un mensaje" rows="1" required></textarea>
+                <span class="message-send" id="send-btn" onclick="sendMessage()">
+                    <i class="fa-solid fa-paper-plane">a</i>
+                </span>
+            </div>
+        </footer>
+    </div>
+
+    <div class="section contacts-section">
+        <div class="search-container">
+            <form action="/search" method="POST">
+                <input type="text" name="searchTerm" class="search-input" placeholder="Search">
+                <button type="reset" class="clear-button"><i class="fas fa-times"></i></button>
+                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+                <button class="contacto">Connecting</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

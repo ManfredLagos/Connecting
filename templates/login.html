@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-container">
+    <form action="/login" method="POST">
+        <input type="text" name="email" placeholder="Correo Electrónico" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <a href="/forgot-password">Olvidé mi contraseña</a>
+        <button type="submit">Iniciar sesión</button>
+    </form>
+    <form action="/" method="POST">
+        <button type="submit">Volver</button>
+    </form>
+</div>
+{% endblock %}

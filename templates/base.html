@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Connecting</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link id="logo" rel="icon" href="static/logo3.ico" type="image/ico">
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h1>CONNECTING</h1>
+        </div>
+        <div class="section">
+            {% block content %}{% endblock %}
+        </div>
+        <div class="section">
+            <p>Todos los derechos reservados &copy; 2023</p>
+        </div>
+    </div>
+    <script>
+        function togglePasswordVisibility() {
+            var password = document.getElementById("password");
+            if (password.type === "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+        }
+    </script>
+    <script>
+            function togglePasswordVisibility2() {
+                var new_password = document.getElementById("new_password");
+                if (new_password.type === "password") {
+                    new_password.type = "text";
+                } else {
+                    new_password.type = "password";
+                }
+            }
+    </script>
+    <script>
+                function togglePasswordVisibility3() {
+                    var confirm_password = document.getElementById("confirm_password");
+                    if (confirm_password.type === "password") {
+                        confirm_password.type = "text";
+                    } else {
+                        confirm_password.type = "password";
+                    }
+                }
+    </script>
+</body>
+</html>

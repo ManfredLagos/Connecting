@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-container">
+    {% if error_message %}
+        <p style="color: {{ error_message.text_color }}; font-weight: {{ error_message.font_weight }}">{{ error_message.text }}</p>
+    {% endif %}
+    <form action="/login" method="POST">
+        <input type="text" name="email" placeholder="Correo Electrónico" required>
+        <div class="password-container">
+            <input type="password" name="password" id="password" placeholder="Contraseña" required>
+            <span class="password-toggle" onclick="togglePasswordVisibility()">
+                <!-- Utilizamos el ícono de "ojo" de Font Awesome -->
+                <i class="fa fa-eye"></i>
+        </div>
+        <a href="/forgot-password">Olvidé mi contraseña</a>
+        <button type="submit">Iniciar sesión</button>
+    </form>
+    <form action="/register" method="POST">
+        <button type="submit">Registrarse</button>
+    </form>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
